@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ---- Empêche de sélectionner une date de prise en charge passée ----
+  var dateInput = document.getElementById('date');
+  if (dateInput) {
+    var today = new Date();
+    var iso = today.getFullYear() + '-' +
+      String(today.getMonth() + 1).padStart(2, '0') + '-' +
+      String(today.getDate()).padStart(2, '0');
+    dateInput.setAttribute('min', iso);
+  }
+
   // ---- Menu mobile ----
   var navToggle = document.getElementById('nav-toggle');
   var mainNav = document.getElementById('main-nav');

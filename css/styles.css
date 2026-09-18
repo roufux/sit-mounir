@@ -439,6 +439,8 @@ textarea { resize: vertical; }
 .footer-logo span { color: var(--gold); }
 .footer-contact { margin-bottom: 8px; font-size: 0.9rem; }
 .footer-copy { font-size: 0.8rem; color: #6f6c66; }
+.footer-copy a { text-decoration: underline; }
+.footer-copy a:hover { color: var(--gold); }
 
 /* ==========================================================================
    Responsive
