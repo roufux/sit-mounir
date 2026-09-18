@@ -21,6 +21,7 @@
       <a href="#accueil">Accueil</a>
       <a href="#services">Services</a>
       <a href="#vehicule">Véhicule</a>
+      <a href="#galerie">Galerie</a>
       <a href="#a-propos">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -41,7 +42,7 @@
 
   <section id="accueil" class="hero">
     <div class="hero-bg" aria-hidden="true">
-      <svg viewBox="0 0 24 24" class="hero-car-icon"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5z"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg>
+      <img src="img/mercedes-classe-v.jpg" alt="" loading="eager">
     </div>
     <div class="container hero-content">
       <p class="hero-eyebrow">Chauffeur privé &middot; Service Limousine</p>
@@ -120,14 +121,27 @@
         </ul>
         <a href="#contact" class="btn btn-primary">Réserver ce véhicule</a>
       </div>
-      <div class="vehicle-visual" aria-hidden="true">
-        <svg viewBox="0 0 200 120">
-          <rect x="10" y="40" width="180" height="45" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-          <path d="M35 40 L50 20 H150 L165 40" fill="none" stroke="currentColor" stroke-width="2"/>
-          <line x1="10" y1="65" x2="190" y2="65" stroke="currentColor" stroke-width="1.2" opacity="0.5"/>
-          <circle cx="55" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="145" cy="90" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
-        </svg>
+      <div class="vehicle-visual">
+        <img src="img/mercedes-classe-v.jpg" alt="Mercedes Classe V, véhicule Prestige Transfert, portière ouverte" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="galerie" class="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-item-wide">
+          <img src="img/mercedes-classe-v.jpg" alt="Mercedes Classe V noire, portière coulissante ouverte" loading="lazy">
+          <figcaption>Mercedes Classe V &mdash; le véhicule Prestige Transfert</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/deplacement-professionnel.jpg" alt="Client travaillant sur son ordinateur portable à bord du véhicule" loading="lazy">
+          <figcaption>Déplacements professionnels</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/station-de-ski.jpg" alt="Route de montagne enneigée vers une station de ski" loading="lazy">
+          <figcaption>Trajets vers les stations de ski</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -175,9 +189,9 @@
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           +33 6 67 29 16 54
         </a>
-        <a href="mailto:Jlvtcline@gmail.com" class="contact-line">
+        <a href="mailto:jlvtcline@gmail.com" class="contact-line">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Jlvtcline@gmail.com
+          jlvtcline@gmail.com
         </a>
       </div>
 
@@ -257,7 +271,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <p class="footer-logo">Prestige <span>Transfert</span></p>
-    <p class="footer-contact">+33 6 67 29 16 54 &middot; Jlvtcline@gmail.com</p>
+    <p class="footer-contact">+33 6 67 29 16 54 &middot; jlvtcline@gmail.com</p>
     <p class="footer-copy">&copy; <span id="year"></span> Prestige Transfert &mdash; JL VTC Line. Tous droits réservés.</p>
   </div>
 </footer>

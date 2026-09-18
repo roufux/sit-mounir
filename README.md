@@ -8,6 +8,7 @@ Site vitrine statique (HTML/CSS/JS, aucune installation nécessaire) pour Presti
 index.html        page unique du site
 css/styles.css    styles (thème noir/or)
 js/main.js        menu mobile + envoi du formulaire
+img/              photos utilisées sur le site
 ```
 
 ## Étape indispensable avant mise en ligne : brancher le formulaire de contact
@@ -44,5 +45,5 @@ Le site est 100% statique : il suffit d'héberger les 3 fichiers/dossiers (`inde
 ## Personnalisation possible plus tard
 
 - **Zone d'intervention / ville** : non précisée pour l'instant, à ajouter dans la section "À propos" si vous voulez afficher une zone géographique.
-- **Photos réelles** : le site utilise actuellement des icônes/illustrations vectorielles (pas de photo). Si vous avez de vraies photos du véhicule ou du chauffeur, elles peuvent remplacer l'illustration de la section "Véhicule" et le fond de la section "Accueil" pour un rendu plus personnel.
+- **Photos réelles** : le site utilise actuellement des photos libres de droits (Pexels, licence gratuite y compris usage commercial, sans attribution requise) dans `img/` pour le fond de la section "Accueil", la section "Véhicule" et la nouvelle section "Galerie". Dès que vous avez de vraies photos de votre propre Mercedes Classe V (et du chauffeur), remplacez simplement les fichiers dans `img/` en gardant les mêmes noms pour un rendu 100% personnel — c'est toujours préférable à des photos génériques.
 - **Réservation en ligne** : non incluse (site vitrine sans réservation, comme demandé). Le formulaire actuel sert à recueillir une demande que vous confirmez ensuite par téléphone/email.
