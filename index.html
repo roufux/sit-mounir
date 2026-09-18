@@ -61,9 +61,7 @@
       <a href="#accueil">Accueil</a>
       <a href="#services">Services</a>
       <a href="#vehicule">Véhicule</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#a-propos">À propos</a>
-      <a href="#contact">Contact</a>
+      <a href="#devis">Devis</a>
     </nav>
 
     <div class="header-actions">
@@ -84,14 +82,114 @@
     <div class="hero-bg" aria-hidden="true">
       <img src="img/mercedes-classe-v.jpg" alt="" loading="eager">
     </div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Chauffeur privé &middot; Service Limousine &middot; Grenoble et périphérie</p>
-      <h1>Pour vos déplacements,<br>en toute sérénité.</h1>
-      <p class="hero-sub">Mercedes Classe V &mdash; 7 places &mdash; Confort premium</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Demander un devis</a>
-        <a href="tel:+33667291654" class="btn btn-outline">Appeler maintenant</a>
+    <div class="container hero-inner">
+
+      <div class="hero-pitch">
+        <p class="hero-eyebrow">Chauffeur privé &middot; Service Limousine &middot; Grenoble et périphérie</p>
+        <h1>Pour vos déplacements,<br>en toute sérénité.</h1>
+        <p class="hero-sub">Mercedes Classe V &mdash; 7 places &mdash; Confort premium</p>
+
+        <div class="trust-strip">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Ponctualité</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
+            <span>Discrétion</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Confort premium</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#devis" class="btn btn-primary">Demander un devis</a>
+          <a href="tel:+33667291654" class="btn btn-outline">Appeler maintenant</a>
+        </div>
       </div>
+
+      <div class="hero-form-wrap" id="devis">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <p class="hero-form-title">Demande de devis</p>
+          <p class="hero-form-sub">Réponse rapide, sans engagement.</p>
+
+          <input type="hidden" name="access_key" value="0dd5bd97-ad96-4f41-aa8c-7b8bf987c663">
+          <input type="hidden" name="subject" value="Nouvelle demande de devis - Prestige Transfert">
+          <input type="hidden" name="from_name" value="Site Prestige Transfert">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom complet *</label>
+              <input type="text" id="nom" name="Nom" required>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone *</label>
+              <input type="tel" id="telephone" name="Téléphone" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email">
+          </div>
+
+          <div class="form-group">
+            <label for="type-trajet">Type de trajet</label>
+            <select id="type-trajet" name="Type de trajet">
+              <option value="Transfert aéroport">Transfert aéroport</option>
+              <option value="Transfert gare">Transfert gare</option>
+              <option value="Station de ski">Station de ski</option>
+              <option value="Déplacement professionnel">Déplacement professionnel</option>
+              <option value="Mise à disposition">Mise à disposition</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date de prise en charge *</label>
+              <input type="date" id="date" name="Date de prise en charge" required>
+            </div>
+            <div class="form-group">
+              <label for="heure">Heure de prise en charge</label>
+              <input type="time" id="heure" name="Heure de prise en charge">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="depart">Lieu de départ *</label>
+              <input type="text" id="depart" name="Lieu de départ" required>
+            </div>
+            <div class="form-group">
+              <label for="arrivee">Lieu d'arrivée</label>
+              <input type="text" id="arrivee" name="Lieu d'arrivée">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="passagers">Nombre de passagers</label>
+            <input type="number" id="passagers" name="Nombre de passagers" min="1" max="7">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Précisions (bagages, demandes particulières...)</label>
+            <textarea id="message" name="Message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+          <p class="hero-form-alt">
+            ou <a href="tel:+33667291654">06 67 29 16 54</a> &middot; <a href="mailto:jlvtcline@gmail.com">jlvtcline@gmail.com</a>
+          </p>
+        </form>
+      </div>
+
     </div>
   </section>
 
@@ -99,7 +197,7 @@
     <div class="container">
       <p class="section-eyebrow">Nos prestations</p>
       <h2>Un service de transport haut de gamme</h2>
-      <p class="section-sub">Transfert et déplacement premium, pour chacun de vos besoins.</p>
+      <p class="section-sub">Basé à Grenoble, JL VTC Line vous accompagne dans tous vos déplacements à Grenoble et dans toute la périphérie.</p>
 
       <div class="services-grid">
 
@@ -119,17 +217,17 @@
           <p>Gare de Grenoble, gare TGV de Lyon Part-Dieu &mdash; prise en charge et dépose sans stress.</p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="19.07" y2="4.93"/></svg>
+        <div class="service-card service-card-photo">
+          <div class="service-card-img">
+            <img src="img/station-de-ski.jpg" alt="Route de montagne enneigée vers une station de ski" loading="lazy">
           </div>
           <h3>Station de ski</h3>
           <p>Alpe d'Huez, Les 2 Alpes, Chamrousse, Villard-de-Lans &mdash; bagages et équipements inclus.</p>
         </div>
 
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <div class="service-card service-card-photo">
+          <div class="service-card-img">
+            <img src="img/deplacement-professionnel.jpg" alt="Client travaillant sur son ordinateur portable à bord du véhicule" loading="lazy">
           </div>
           <h3>Déplacements professionnels</h3>
           <p>Rendez-vous d'affaires, roadshows et événements d'entreprise.</p>
@@ -159,152 +257,11 @@
           <li>Idéal pour familles, groupes et déplacements professionnels</li>
           <li>Confort et discrétion à chaque trajet</li>
         </ul>
-        <a href="#contact" class="btn btn-primary">Réserver ce véhicule</a>
+        <a href="#devis" class="btn btn-primary">Réserver ce véhicule</a>
       </div>
       <div class="vehicle-visual">
         <img src="img/mercedes-classe-v.jpg" alt="Mercedes Classe V, véhicule Prestige Transfert, portière ouverte" loading="lazy">
       </div>
-    </div>
-  </section>
-
-  <section id="galerie" class="gallery">
-    <div class="container">
-      <div class="gallery-grid">
-        <figure class="gallery-item gallery-item-wide">
-          <img src="img/mercedes-classe-v.jpg" alt="Mercedes Classe V noire, portière coulissante ouverte" loading="lazy">
-          <figcaption>Mercedes Classe V &mdash; le véhicule Prestige Transfert</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="img/deplacement-professionnel.jpg" alt="Client travaillant sur son ordinateur portable à bord du véhicule" loading="lazy">
-          <figcaption>Déplacements professionnels</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="img/station-de-ski.jpg" alt="Route de montagne enneigée vers une station de ski" loading="lazy">
-          <figcaption>Trajets vers les stations de ski</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="a-propos" class="about">
-    <div class="container about-inner">
-      <p class="section-eyebrow">À propos</p>
-      <h2>JL VTC Line</h2>
-      <p class="about-text">Basé à Grenoble, Prestige Transfert vous accompagne dans tous vos déplacements à Grenoble et dans toute la périphérie avec un service de chauffeur privé haut de gamme. Ponctualité, discrétion et confort sont au cœur de chaque trajet, à bord d'un véhicule Mercedes Classe V 7 places.</p>
-
-      <div class="about-points">
-        <div class="about-point">
-          <div class="service-icon small">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4>Ponctualité</h4>
-          <p>Un chauffeur à l'heure, à chaque trajet.</p>
-        </div>
-        <div class="about-point">
-          <div class="service-icon small">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
-          </div>
-          <h4>Discrétion</h4>
-          <p>Un service professionnel et confidentiel.</p>
-        </div>
-        <div class="about-point">
-          <div class="service-icon small">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h4>Confort premium</h4>
-          <p>Un véhicule spacieux, propre et soigné.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container contact-inner">
-      <div class="contact-info">
-        <p class="section-eyebrow">Réservation</p>
-        <h2>Contact &amp; devis</h2>
-        <p>Pour une demande de devis ou une réservation, contactez-nous directement ou remplissez le formulaire ci-contre.</p>
-
-        <a href="tel:+33667291654" class="contact-line">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +33 6 67 29 16 54
-        </a>
-        <a href="mailto:jlvtcline@gmail.com" class="contact-line">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          jlvtcline@gmail.com
-        </a>
-      </div>
-
-      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="0dd5bd97-ad96-4f41-aa8c-7b8bf987c663">
-        <input type="hidden" name="subject" value="Nouvelle demande de devis - Prestige Transfert">
-        <input type="hidden" name="from_name" value="Site Prestige Transfert">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="nom">Nom complet *</label>
-            <input type="text" id="nom" name="Nom" required>
-          </div>
-          <div class="form-group">
-            <label for="telephone">Téléphone *</label>
-            <input type="tel" id="telephone" name="Téléphone" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="Email">
-        </div>
-
-        <div class="form-group">
-          <label for="type-trajet">Type de trajet</label>
-          <select id="type-trajet" name="Type de trajet">
-            <option value="Transfert aéroport">Transfert aéroport</option>
-            <option value="Transfert gare">Transfert gare</option>
-            <option value="Station de ski">Station de ski</option>
-            <option value="Déplacement professionnel">Déplacement professionnel</option>
-            <option value="Mise à disposition">Mise à disposition</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="date">Date de prise en charge *</label>
-            <input type="date" id="date" name="Date de prise en charge" required>
-          </div>
-          <div class="form-group">
-            <label for="heure">Heure de prise en charge</label>
-            <input type="time" id="heure" name="Heure de prise en charge">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="depart">Lieu de départ *</label>
-            <input type="text" id="depart" name="Lieu de départ" required>
-          </div>
-          <div class="form-group">
-            <label for="arrivee">Lieu d'arrivée</label>
-            <input type="text" id="arrivee" name="Lieu d'arrivée">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="passagers">Nombre de passagers</label>
-          <input type="number" id="passagers" name="Nombre de passagers" min="1" max="7">
-        </div>
-
-        <div class="form-group">
-          <label for="message">Précisions (bagages, demandes particulières...)</label>
-          <textarea id="message" name="Message" rows="4"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
-
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
     </div>
   </section>
 
