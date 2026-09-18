@@ -195,9 +195,11 @@
         </a>
       </div>
 
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis - Prestige Transfert">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="0dd5bd97-ad96-4f41-aa8c-7b8bf987c663">
+        <input type="hidden" name="subject" value="Nouvelle demande de devis - Prestige Transfert">
+        <input type="hidden" name="from_name" value="Site Prestige Transfert">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-row">
           <div class="form-group">

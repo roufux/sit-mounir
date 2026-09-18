@@ -13,19 +13,19 @@ img/              photos utilisées sur le site
 
 ## Étape indispensable avant mise en ligne : brancher le formulaire de contact
 
-Le formulaire de contact utilise **Formspree** pour recevoir les demandes par email (le site étant statique, il n'a pas de serveur pour envoyer les emails lui-même).
+Le formulaire de contact utilise **[Web3Forms](https://web3forms.com)** pour recevoir les demandes par email (le site étant statique, il n'a pas de serveur pour envoyer les emails lui-même). Gratuit, envois illimités, aucun compte obligatoire.
 
-1. Créez un compte gratuit sur https://formspree.io (jusqu'à 50 soumissions/mois gratuites).
-2. Créez un nouveau formulaire, associez-lui l'adresse email qui doit recevoir les demandes (ex: `Jlvtcline@gmail.com`).
-3. Formspree vous donne une URL du type `https://formspree.io/f/abcd1234`.
-4. Ouvrez `index.html`, cherchez la ligne suivante (section formulaire de contact) :
+1. Allez sur https://web3forms.com, entrez l'adresse email qui doit recevoir les demandes (`jlvtcline@gmail.com`) : une clé d'accès (`access_key`) est envoyée instantanément par email, aucune inscription nécessaire.
+2. Ouvrez `index.html`, cherchez la ligne suivante (section formulaire de contact) :
    ```html
-   <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
    ```
-5. Remplacez `YOUR_FORM_ID` par votre propre identifiant Formspree.
-6. Testez le formulaire une fois en ligne : Formspree demande de confirmer le premier envoi par email.
+3. Remplacez `YOUR_WEB3FORMS_ACCESS_KEY` par votre clé reçue par email.
+4. Testez le formulaire une fois en ligne — l'email doit arriver dans la boîte `jlvtcline@gmail.com` (pensez à vérifier les spams la première fois).
 
-Tant que `YOUR_FORM_ID` n'est pas remplacé, le formulaire ne fonctionnera pas.
+Tant que `YOUR_WEB3FORMS_ACCESS_KEY` n'est pas remplacée, le formulaire ne fonctionnera pas.
+
+Note : la clé d'accès Web3Forms est conçue pour être visible côté client (elle apparaît dans le code source de la page), ce n'est pas un problème de sécurité — c'est le fonctionnement normal du service.
 
 ## Aperçu en local
 
@@ -40,7 +40,7 @@ Puis ouvrez http://localhost:8000
 
 ## Mise en ligne
 
-Le site est 100% statique : il suffit d'héberger les 3 fichiers/dossiers (`index.html`, `css/`, `js/`) sur n'importe quel hébergement (mutualisé classique, Netlify, GitHub Pages, etc.), sans build ni configuration serveur.
+Le site est 100% statique : il suffit d'héberger `index.html`, `css/`, `js/` et `img/` sur n'importe quel hébergement (mutualisé classique, Netlify, GitHub Pages, etc.), sans build ni configuration serveur.
 
 ## Personnalisation possible plus tard
 

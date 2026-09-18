@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- Envoi du formulaire de contact via Formspree (AJAX) ----
+  // ---- Envoi du formulaire de contact via Web3Forms (AJAX) ----
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
 
@@ -50,18 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: { 'Accept': 'application/json' }
       })
         .then(function (response) {
-          if (response.ok) {
-            form.reset();
-            status.textContent = 'Merci, votre demande a bien été envoyée. Nous vous recontactons rapidement.';
-            status.classList.add('success');
-          } else {
-            return response.json().then(function (data) {
-              var message = (data && data.errors)
-                ? data.errors.map(function (err) { return err.message; }).join(', ')
-                : "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
+          return response.json().then(function (data) {
+            if (response.ok && data && data.success !== false) {
+              form.reset();
+              status.textContent = 'Merci, votre demande a bien été envoyée. Nous vous recontactons rapidement.';
+              status.classList.add('success');
+            } else {
+              var message = (data && (data.message || (data.errors && data.errors.map(function (err) { return err.message; }).join(', '))))
+                || "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
               throw new Error(message);
-            });
-          }
+            }
+          });
         })
         .catch(function (error) {
           status.textContent = error.message || "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
