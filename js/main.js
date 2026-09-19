@@ -52,12 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
       status.className = 'form-status';
       status.textContent = '';
 
-      var data = new FormData(form);
+      var formData = new FormData(form);
+      var object = {};
+      formData.forEach(function (value, key) {
+        object[key] = value;
+      });
 
       fetch(form.action, {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        body: JSON.stringify(object),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+          'Accept': 'application/json'
+        }
       })
         .then(function (response) {
           return response.json().then(function (data) {
