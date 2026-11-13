@@ -90,7 +90,7 @@ img, svg { display: block; max-width: 100%; }
 .btn-call .icon { width: 15px; height: 15px; fill: currentColor; }
 
 .btn-whatsapp {
-  background: green;
+  background: #25D366;
   border-color: black;
   color: var(--dark-2);
   width: 40px;
